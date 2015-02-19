@@ -1,7 +1,7 @@
 {
   'targets': [
-    { 'target_name': 'platform-android',
-      'product_name': 'mbgl-platform-android',
+    { 'target_name': 'platform-linux',
+      'product_name': 'mbgl-platform-linux',
       'type': 'static_library',
       'standalone_static_library': 1,
       'hard_dependency': 1,
@@ -10,13 +10,14 @@
       ],
 
       'sources': [
-        '../platform/android/log_android.cpp',
-        '../platform/android/asset_root.cpp',
-        '../platform/default/string_stdlib.cpp',
-        '../platform/default/image.cpp',
-        '../platform/default/image_reader.cpp',
-        '../platform/default/png_reader.cpp',
-        '../platform/default/jpeg_reader.cpp',
+        '../default/log_stderr.cpp',
+        '../default/string_stdlib.cpp',
+        '../default/application_root.cpp',
+        '../default/asset_root.cpp',
+        '../default/image.cpp',
+        '../default/image_reader.cpp',
+        '../default/png_reader.cpp',
+        '../default/jpeg_reader.cpp',
       ],
 
       'variables': {
@@ -42,8 +43,7 @@
       },
 
       'include_dirs': [
-        '../include',
-        '../src',
+        '../../include'
       ],
 
       'conditions': [
@@ -69,7 +69,7 @@
 
       'direct_dependent_settings': {
         'include_dirs': [
-          '../include',
+          '../../include',
         ],
       },
     },

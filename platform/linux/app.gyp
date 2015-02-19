@@ -1,6 +1,6 @@
 {
   'includes': [
-    '../gyp/common.gypi',
+    '../../gyp/common.gypi',
   ],
   'targets': [
     { 'target_name': 'linuxapp',
@@ -8,20 +8,20 @@
       'type': 'executable',
 
       'dependencies': [
-        '../mbgl.gyp:core',
-        '../mbgl.gyp:platform-<(platform_lib)',
-        '../mbgl.gyp:http-<(http_lib)',
-        '../mbgl.gyp:asset-<(asset_lib)',
-        '../mbgl.gyp:cache-<(cache_lib)',
-        '../mbgl.gyp:bundle_styles',
-        '../mbgl.gyp:copy_certificate_bundle',
+        '../../mbgl.gyp:core',
+        '../../mbgl.gyp:platform-<(platform_lib)',
+        '../../mbgl.gyp:http-<(http_lib)',
+        '../../mbgl.gyp:asset-<(asset_lib)',
+        '../../mbgl.gyp:cache-<(cache_lib)',
+        '../../mbgl.gyp:bundle_styles',
+        '../../mbgl.gyp:copy_certificate_bundle',
       ],
 
       'sources': [
-        'main.cpp',
-        '../platform/default/settings_json.cpp',
-        '../platform/default/glfw_view.cpp',
-        '../platform/default/log_stderr.cpp',
+        'app/main.cpp',
+        '../default/settings_json.cpp',
+        '../default/glfw_view.cpp',
+        '../default/log_stderr.cpp',
       ],
 
       'variables' : {
@@ -50,7 +50,7 @@
       ],
 
       'copies': [{
-        'files': [ '../styles/styles' ],
+        'files': [ '../../styles/styles' ],
         'destination': '<(PRODUCT_DIR)'
       }],
     },

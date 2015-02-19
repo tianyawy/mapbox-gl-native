@@ -22,18 +22,18 @@
       ],
 
       'sources': [
-        './main.m',
-        './MBXAppDelegate.h',
-        './MBXAppDelegate.m',
-        './MBXViewController.h',
-        './MBXViewController.mm',
-        '../../platform/darwin/settings_nsuserdefaults.mm',
+        'app/main.m',
+        'app/MBXAppDelegate.h',
+        'app/MBXAppDelegate.m',
+        'app/MBXViewController.h',
+        'app/MBXViewController.mm',
+        '../darwin/settings_nsuserdefaults.mm',
       ],
 
       'xcode_settings': {
         'SDKROOT': 'iphoneos',
         'SUPPORTED_PLATFORMS': 'iphonesimulator iphoneos',
-        'INFOPLIST_FILE': 'app-info.plist',
+        'INFOPLIST_FILE': 'app/app-info.plist',
         'TARGETED_DEVICE_FAMILY': '1,2',
         'COMBINE_HIDPI_IMAGES': 'NO', # don't merge @2x.png images into .tiff files
         'CLANG_ENABLE_OBJC_ARC': 'YES',

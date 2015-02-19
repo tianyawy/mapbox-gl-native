@@ -1,6 +1,6 @@
 {
   'includes': [
-    '../gyp/common.gypi',
+    '../../gyp/common.gypi',
   ],
   'targets': [
     { 'target_name': 'osxapp',
@@ -9,25 +9,25 @@
       'product_extension': 'app',
       'mac_bundle': 1,
       'mac_bundle_resources': [
-        'Icon.icns',
+        'app/Icon.icns',
       ],
 
       'dependencies': [
-        '../mbgl.gyp:bundle_styles',
-        '../mbgl.gyp:core',
-        '../mbgl.gyp:platform-<(platform_lib)',
-        '../mbgl.gyp:http-<(http_lib)',
-        '../mbgl.gyp:asset-<(asset_lib)',
-        '../mbgl.gyp:cache-<(cache_lib)',
+        '../../mbgl.gyp:bundle_styles',
+        '../../mbgl.gyp:core',
+        '../../mbgl.gyp:platform-<(platform_lib)',
+        '../../mbgl.gyp:http-<(http_lib)',
+        '../../mbgl.gyp:asset-<(asset_lib)',
+        '../../mbgl.gyp:cache-<(cache_lib)',
       ],
 
       'sources': [
-        './main.mm',
-        '../platform/darwin/settings_nsuserdefaults.hpp',
-        '../platform/darwin/settings_nsuserdefaults.mm',
-        '../platform/darwin/reachability.m',
-        '../platform/default/glfw_view.hpp',
-        '../platform/default/glfw_view.cpp',
+        'app/main.mm',
+        '../darwin/settings_nsuserdefaults.hpp',
+        '../darwin/settings_nsuserdefaults.mm',
+        '../darwin/reachability.m',
+        '../default/glfw_view.hpp',
+        '../default/glfw_view.cpp',
       ],
 
       'variables' : {
@@ -53,7 +53,7 @@
         'OTHER_CPLUSPLUSFLAGS': [ '<@(cflags_cc)' ],
         'OTHER_LDFLAGS': [ '<@(ldflags)' ],
         'SDKROOT': 'macosx',
-        'INFOPLIST_FILE': 'Info.plist',
+        'INFOPLIST_FILE': 'app/Info.plist',
         'MACOSX_DEPLOYMENT_TARGET': '10.9',
         'CLANG_ENABLE_OBJC_ARC': 'YES'
       },

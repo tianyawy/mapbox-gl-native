@@ -1,6 +1,6 @@
 {
   'includes': [
-    '../gyp/common.gypi',
+    '../../gyp/common.gypi',
   ],
   'targets': [
     { 'target_name': 'android-lib',
@@ -9,16 +9,16 @@
       'hard_dependency': 1,
 
       'dependencies': [
-        '../mbgl.gyp:core',
-        '../mbgl.gyp:platform-<(platform_lib)',
-        '../mbgl.gyp:http-<(http_lib)',
-        '../mbgl.gyp:asset-<(asset_lib)',
-        '../mbgl.gyp:cache-<(cache_lib)',
+        '../../mbgl.gyp:core',
+        '../../mbgl.gyp:platform-<(platform_lib)',
+        '../../mbgl.gyp:http-<(http_lib)',
+        '../../mbgl.gyp:asset-<(asset_lib)',
+        '../../mbgl.gyp:cache-<(cache_lib)',
       ],
 
       'sources': [
-        './cpp/native_map_view.cpp',
-        './cpp/jni.cpp',
+        'cpp/native_map_view.cpp',
+        'cpp/jni.cpp',
       ],
 
       'cflags_cc': [
@@ -74,8 +74,8 @@
       'copies': [
         {
           'files': [
-            '../common/ca-bundle.crt',
-            '../styles/styles'
+            '../../common/ca-bundle.crt',
+            '../../styles/styles'
           ],
           'destination': '<(pwd)/java/MapboxGLAndroidSDK/src/main/assets'
         },

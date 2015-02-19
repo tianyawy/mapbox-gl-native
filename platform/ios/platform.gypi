@@ -10,24 +10,24 @@
       ],
 
       'sources': [
-        '../platform/darwin/log_nslog.mm',
-        '../platform/darwin/string_nsstring.mm',
-        '../platform/darwin/application_root.mm',
-        '../platform/darwin/asset_root.mm',
-        '../platform/darwin/image.mm',
-        '../platform/darwin/reachability.m',
-        '../include/mbgl/ios/MGLMapView.h',
-        '../platform/ios/MGLMapView.mm',
-        '../include/mbgl/ios/MGLStyleFunctionValue.h',
-        '../platform/ios/MGLStyleFunctionValue.m',
-        '../include/mbgl/ios/MGLTypes.h',
-        '../platform/ios/MGLTypes.m',
-        '../include/mbgl/ios/NSArray+MGLAdditions.h',
-        '../platform/ios/NSArray+MGLAdditions.m',
-        '../include/mbgl/ios/NSDictionary+MGLAdditions.h',
-        '../platform/ios/NSDictionary+MGLAdditions.m',
-        '../include/mbgl/ios/UIColor+MGLAdditions.h',
-        '../platform/ios/UIColor+MGLAdditions.m',
+        '../darwin/log_nslog.mm',
+        '../darwin/string_nsstring.mm',
+        '../darwin/application_root.mm',
+        '../darwin/asset_root.mm',
+        '../darwin/image.mm',
+        '../darwin/reachability.m',
+        './include/MGLMapView.h',
+        './include/MGLStyleFunctionValue.h',
+        './include/MGLTypes.h',
+        './include/NSArray+MGLAdditions.h',
+        './include/NSDictionary+MGLAdditions.h',
+        './include/UIColor+MGLAdditions.h',
+        './src/MGLMapView.mm',
+        './src/MGLStyleFunctionValue.m',
+        './src/MGLTypes.m',
+        './src/NSArray+MGLAdditions.m',
+        './src/NSDictionary+MGLAdditions.m',
+        './src/UIColor+MGLAdditions.m',
       ],
 
       'variables': {
@@ -51,7 +51,7 @@
       },
 
       'include_dirs': [
-        '../include',
+        '../../include',
       ],
 
       'xcode_settings': {
@@ -68,7 +68,7 @@
 
       'direct_dependent_settings': {
         'include_dirs': [
-          '../include',
+          '../../include',
         ],
         'mac_bundle_resources': [
           '<!@(find ./platform/ios/resources -type f)',

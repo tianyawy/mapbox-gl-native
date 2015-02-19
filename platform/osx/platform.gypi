@@ -10,11 +10,11 @@
       ],
 
       'sources': [
-        '../platform/darwin/log_nslog.mm',
-        '../platform/darwin/string_nsstring.mm',
-        '../platform/darwin/application_root.mm',
-        '../platform/darwin/asset_root.mm',
-        '../platform/darwin/image.mm',
+        '../darwin/log_nslog.mm',
+        '../darwin/string_nsstring.mm',
+        '../darwin/application_root.mm',
+        '../darwin/asset_root.mm',
+        '../darwin/image.mm',
       ],
 
       'variables': {
@@ -33,8 +33,7 @@
       },
 
       'include_dirs': [
-        '../include',
-        '../src',
+        '../../include'
       ],
 
       'xcode_settings': {
@@ -51,7 +50,7 @@
 
       'direct_dependent_settings': {
         'include_dirs': [
-          '../include',
+          '../../include',
         ],
       },
     },
